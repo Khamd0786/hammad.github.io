@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hammad Khan - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.4;
+            color: #333;
+            background: white;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Left Column - 30% */
+        .left-column {
+            width: 30%;
+            background: #2c3e50;
+            color: white;
+            padding: 30px 20px;
+        }
+        
+        .left-column h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+            color: white;
+        }
+        
+        .title {
+            font-size: 12px;
+            color: #ecf0f1;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .contact-info {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #34495e;
+            padding-bottom: 20px;
+        }
+        
+        .contact-info p {
+            font-size: 11px;
+            margin: 5px 0;
+            color: #ecf0f1;
+        }
+        
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .section-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 25px 0 15px 0;
+            color: #3498db;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .skill-category {
+            margin-bottom: 15px;
+        }
+        
+        .skill-category h4 {
+            font-size: 11px;
+            color: #ecf0f1;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        .skill-tags {
+            font-size: 10px;
+            color: #bdc3c7;
+            line-height: 1.6;
+        }
+        
+        .education-item {
+            margin-bottom: 15px;
+            font-size: 11px;
+        }
+        
+        .education-item .degree {
+            color: #ecf0f1;
+            font-weight: 500;
+        }
+        
+        .education-item .school {
+            color: #bdc3c7;
+            font-size: 10px;
+        }
+        
+        .education-item .date {
+            color: #95a5a6;
+            font-size: 10px;
+        }
+        
+        .achievements {
+            margin-top: 30px;
+        }
+        
+        .achievement-item {
+            font-size: 10px;
+            color: #ecf0f1;
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+        
+        .achievement-item:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+        }
+        
+        /* Right Column - 70% */
+        .right-column {
+            width: 70%;
+            padding: 30px 30px;
+            background: white;
+        }
+        
+        .summary {
+            background: #f8f9fa;
+            padding: 15px;
+            border-left: 3px solid #3498db;
+            margin-bottom: 25px;
+            font-size: 12px;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        .right-section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 25px 0 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+        }
+        
+        .job {
+            margin-bottom: 25px;
+        }
+        
+        .job-header {
+            margin-bottom: 10px;
+        }
+        
+        .job-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #2c3e50;
+            display: inline-block;
+        }
+        
+        .company {
+            font-size: 13px;
+            color: #3498db;
+            font-weight: 500;
+        }
+        
+        .job-date {
+            font-size: 11px;
+            color: #7f8c8d;
+            float: right;
+        }
+        
+        .job-location {
+            font-size: 11px;
+            color: #95a5a6;
+        }
+        
+        .job ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .job li {
+            font-size: 11px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            color: #555;
+        }
+        
+        .job li:before {
+            content: "•";
+            position: absolute;
+            left: 5px;
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        .job li strong {
+            color: #2c3e50;
+        }
+        
+        .projects {
+            margin-top: 25px;
+        }
+        
+        .projects ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .projects li {
+            font-size: 11px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+            color: #555;
+        }
+        
+        .projects li:before {
+            content: "▸";
+            position: absolute;
+            left: 5px;
+            color: #3498db;
+        }
+        
+        @media print {
+            .container {
+                box-shadow: none;
+            }
+            .left-column {
+                background: #f5f5f5;
+                color: #333;
+            }
+            .left-column h1 {
+                color: #333;
+            }
+            .contact-info a {
+                color: #2980b9;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Column -->
+        <div class="left-column">
+            <h1>Hammad Khan</h1>
+            <div class="title">SDE-2 | Android & KMP</div>
+            
+            <div class="contact-info">
+                <p>📍 Bangalore, India</p>
+                <p>✉️ khamd0786@gmail.com</p>
+                <p>💼 <a href="#">LinkedIn/HammadKhan</a></p>
+                <p>🔗 <a href="#">github.com/khamd0786</a></p>
+                <p>📝 <a href="#">medium.com/@khamd0786</a></p>
+            </div>
+            
+            <div class="section-title">Technical Skills</div>
+            
+            <div class="skill-category">
+                <h4>LANGUAGES</h4>
+                <div class="skill-tags">Kotlin • Java • SQL • KMP</div>
+            </div>
+            
+            <div class="skill-category">
+                <h4>ANDROID & UI</h4>
+                <div class="skill-tags">Jetpack Compose • Navigation • ViewModel • LiveData • Room • Hilt/Dagger2</div>
+            </div>
+            
+            <div class="skill-category">
+                <h4>NETWORKING</h4>
+                <div class="skill-tags">Ktor • Retrofit • Socket.IO • MQTT • WebSocket • REST APIs</div>
+            </div>
+            
+            <div class="skill-category">
+                <h4>ARCHITECTURE</h4>
+                <div class="skill-tags">MVVM • Clean • SOLID • Repository Pattern</div>
+            </div>
+            
+            <div class="skill-category">
+                <h4>TOOLS</h4>
+                <div class="skill-tags">Git • CI/CD • Firebase • Agora SDK • CleverTap</div>
+            </div>
+            
+            <div class="section-title">Education</div>
+            <div class="education-item">
+                <div class="degree">BBA</div>
+                <div class="school">Anand Engineering College</div>
+                <div class="date">2018 - 2021 | Agra</div>
+            </div>
+            
+            <div class="section-title">Key Metrics</div>
+            <div class="achievements">
+                <div class="achievement-item">50M+ active users served</div>
+                <div class="achievement-item"><1% crash rate maintained</div>
+                <div class="achievement-item"><0.5% ANR across projects</div>
+                <div class="achievement-item">45% engagement increase</div>
+                <div class="achievement-item">₹45M+ revenue generated</div>
+            </div>
+        </div>
+        
+        <!-- Right Column -->
+        <div class="right-column">
+            <div class="summary">
+                Experienced mobile engineer with 3+ years building high-performance Android applications serving 50M+ users. Currently leading cross-platform initiatives with Kotlin Multiplatform (KMP) while maintaining expertise in native Android development. Proven track record of implementing scalable architectures, real-time features, and driving measurable user engagement improvements.
+            </div>
+            
+            <div class="right-section-title">Work Experience</div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Software Development Engineer-2</div>
+                    <span class="job-date">Feb 2024 - Present</span>
+                    <div style="clear: both;"></div>
+                    <div class="company">EloElo (Greenhorn Wellness Pvt Ltd)</div>
+                    <div class="job-location">Bangalore, India</div>
+                </div>
+                <ul>
+                    <li><strong>Spearheaded KMP adoption (2025):</strong> Leading migration to Kotlin Multiplatform for shared business logic across iOS/Android, reducing code duplication by 40% and accelerating feature delivery by 30%</li>
+                    <li><strong>Built chat system from scratch using Jetpack Compose:</strong> Serving 50M+ users with Socket connections for real-time 1-on-1 messaging including reactions, replies, and status indicators</li>
+                    <li><strong>Engineered group chat with MQTT protocol:</strong> Efficient broadcasting to groups up to 10K members, achieving 99.9% delivery rate with <100ms latency</li>
+                    <li><strong>Increased livestream engagement by 45%:</strong> Integrated Agora SDK with strategic notification system using Strategy Pattern, processing 1M+ daily notifications</li>
+                    <li><strong>Drove ₹45M+ annual revenue:</strong> Integrated payment SDKs achieving 99.95% transaction success rate with retry mechanisms and failover strategies</li>
+                    <li><strong>Optimized performance by 60%:</strong> Reduced API response time through parallel processing with Kotlin Coroutines and efficient Room database caching</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Senior Android Developer</div>
+                    <span class="job-date">Jan 2023 - Feb 2024</span>
+                    <div style="clear: both;"></div>
+                    <div class="company">Zazz.io</div>
+                    <div class="job-location">Hyderabad, India</div>
+                </div>
+                <ul>
+                    <li><strong>Delivered 4 production apps:</strong> Using MVVM Clean Architecture, reduced development time by 35% and achieved 4.5+ star ratings on Play Store</li>
+                    <li><strong>Reduced crash rate by 85%:</strong> Implemented comprehensive error handling with Firebase Crashlytics and memory leak detection using LeakCanary</li>
+                    <li><strong>Built offline-first architecture:</strong> Using Room and WorkManager, enabled 100% offline availability with seamless data syncing</li>
+                    <li><strong>Improved performance by 40%:</strong> Through lazy loading, image caching with Glide, and optimized RecyclerView with DiffUtil</li>
+                </ul>
+            </div>
+            
+            <div class="job">
+                <div class="job-header">
+                    <div class="job-title">Android Developer</div>
+                    <span class="job-date">Jan 2022 - Jan 2023</span>
+                    <div style="clear: both;"></div>
+                    <div class="company">Hood Internet Pvt. Ltd.</div>
+                    <div class="job-location">Gurugram, India</div>
+                </div>
+                <ul>
+                    <li><strong>Achieved <0.5% ANR rate:</strong> Improved user satisfaction by 50% through strategic Android Jetpack implementation and background task optimization</li>
+                    <li><strong>Designed real-time pub-sub architecture:</strong> WebSockets handling 10K+ concurrent connections, reducing latency from 3s to 200ms</li>
+                    <li><strong>Increased DAU by 30%:</strong> Implemented personalized push notifications via CleverTap with A/B testing achieving 25% higher CTR</li>
+                    <li><strong>Established analytics tracking:</strong> Captured 90% of user interactions using Firebase, CleverTap, Adjust, and MixPanel for data-driven decisions</li>
+                </ul>
+            </div>
+            
+            <div class="right-section-title">Projects & Contributions</div>
+            <div class="projects">
+                <ul>
+                    <li><strong>Technical Blog:</strong> Regular Medium contributor covering Android development, KMP migration strategies, and mobile architecture patterns</li>
+                    <li><strong>Open Source:</strong> Active GitHub contributor focusing on Android libraries and KMP modules with 100+ stars across repositories</li>
+                    <li><strong>Speaking:</strong> Conducted knowledge sharing sessions on Kotlin Multiplatform adoption and real-time messaging architectures</li>
+                    <li><strong>Community:</strong> Active participant in Android developer communities, mentoring junior developers on best practices</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
